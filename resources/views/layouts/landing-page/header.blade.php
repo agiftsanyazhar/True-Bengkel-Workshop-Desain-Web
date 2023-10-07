@@ -13,7 +13,7 @@
         <li><a href="{{ url()->route('landing-page.index') . '#products' }}">Products</a></li>
         <li><a href="{{ url()->route('landing-page.index') . '#customer-service' }}">Customer Service</a></li>
         <li><a href="{{ url()->route('landing-page.index') . '#gallery' }}">Gallery</a></li>
-        <li><a href="{{ url()->route('landing-page.index') . '#contatc' }}">Contact</a></li>
+        <li><a href="{{ url()->route('landing-page.index') . '#contact' }}">Contact</a></li>
       </ul>
       <ul>
         <div class="d-flex ms-5 me-5">
