@@ -16,19 +16,19 @@ class LandingPageController extends Controller
         return view('landing-page.index', $data);
     }
 
-    public function products()
-    {
-        $data['title'] = 'Products';
+    // public function products()
+    // {
+    //     $data['title'] = 'Products';
 
-        return view('landing-page.products', $data);
-    }
+    //     return view('landing-page.products', $data);
+    // }
 
-    public function customerService()
-    {
-        $data['title'] = 'Customer Serivce';
+    // public function customerService()
+    // {
+    //     $data['title'] = 'Customer Serivce';
 
-        return view('landing-page.customer-service', $data);
-    }
+    //     return view('landing-page.customer-service', $data);
+    // }
 
     public function gallery()
     {

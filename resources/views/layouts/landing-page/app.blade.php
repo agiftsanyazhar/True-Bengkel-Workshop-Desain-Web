@@ -26,8 +26,6 @@
 
   @include('layouts.landing-page.header')
 
-  @include('layouts.landing-page.hero-section')
-
   <main id="main">
     @yield('container')
   </main>
