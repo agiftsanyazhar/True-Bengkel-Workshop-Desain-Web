@@ -91,7 +91,7 @@
             <div class="col-md-3 products-item">
               <a href="">
                 <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-anthony-📷📹🙂-133627.jpg') }}" class="card-img-top">
+                  <img src="{{ asset('landing-page/img/pexels-anthony-133627.jpg') }}" class="card-img-top">
                   <div class="card-body">
                     <h4>Lifebuoy</h4>
                     <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
