@@ -14,7 +14,7 @@
         <li><a href="{{ url()->route('landing-page.index') . '#customer-service' }}">Customer Service</a></li>
         <li><a href="{{ url()->route('landing-page.index') . '#gallery' }}">Gallery</a></li>
         <li><a href="{{ url()->route('landing-page.index') . '#contact' }}">Contact</a></li>
-        <li class="text-center">
+        <li>
           <div class="btn-group" role="group">
             <a href="javascript:void(0)"><i class="bi bi-search"></i></a>
             <a href="javascript:void(0)"><i class="bi bi-cart"></i></a>
