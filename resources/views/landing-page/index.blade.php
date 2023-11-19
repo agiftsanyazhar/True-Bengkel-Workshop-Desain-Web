@@ -8,7 +8,7 @@
         <div class="col-md-12 d-flex flex-column justify-content-center align-items-center text-center">
           <h2>Welcome to True Bengkel</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum esse fuga amet perspiciatis assumenda dignissimos, itaque adipisci accusamus saepe asperiores. Quae totam facere, id recusandae libero ipsam ratione rem at officiis, quibusdam tempore cum odit impedit dignissimos, quo sequi delectus possimus deleniti distinctio aperiam sint inventore! Quibusdam vel esse at.</p>
-          <div class="d-flex flex-column">
+          <div class="d-flex">
             <a href="{{ url()->route('landing-page.index') . '#about' }}" class="btn-login">Get Started</a>
           </div>
         </div>
@@ -57,28 +57,33 @@
 
       <ul class="nav nav-tabs d-flex justify-content-center">
 
-        <li class="nav-item">
-          <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#products-boats">
-            <h4>Boats</h4>
-          </a>
-        </li>
+        <div class="slider">
 
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#products-cars">
-            <h4>Cars</h4>
-          </a>
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#products-boats">
+              <h4>Boats</h4>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#products-cars">
+              <h4>Cars</h4>
+            </a>
+  
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#products-motorcycles">
+              <h4>Motorcycles</h4>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#products-trucks">
+              <h4>Trucks</h4>
+            </a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#products-motorcycles">
-            <h4>Motorcycles</h4>
-          </a>
-        </li>
+        </div>
 
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#products-trucks">
-            <h4>Trucks</h4>
-          </a>
-        </li>
 
       </ul>
 
@@ -288,11 +293,11 @@
       <div class="row gy-5">
 
         <div class="col-md-4 d-flex">
-          <div class="customer-service-worker">
-            <div class="worker-img">
+          <div class="customer-service-employee">
+            <div class="employee-img">
               <img src="{{ asset('landing-page/img/pexels-thisisengineering-3862614.jpg') }}" class="img-fluid" alt="">
             </div>
-            <div class="worker-info">
+            <div class="employee-info">
               <h4>Sarah</h4>
               <span>CEO</span>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente qui magni commodi doloribus quisquam consequatur doloremque nemo quia consectetur, voluptatem, asperiores est impedit dolor fuga repellendus officiis exercitationem praesentium.</p>
@@ -301,11 +306,11 @@
         </div>
 
         <div class="col-md-4 d-flex">
-          <div class="customer-service-worker">
-            <div class="worker-img">
+          <div class="customer-service-employee">
+            <div class="employee-img">
               <img src="{{ asset('landing-page/img/pexels-andrea-piacquadio-3771045.jpg') }}" class="img-fluid" alt="">
             </div>
-            <div class="worker-info">
+            <div class="employee-info">
               <h4>Alex</h4>
               <span>CTO</span>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente qui magni commodi doloribus quisquam consequatur doloremque nemo quia consectetur, voluptatem, asperiores est impedit dolor fuga repellendus officiis exercitationem praesentium.</p>
@@ -314,11 +319,11 @@
         </div>
 
         <div class="col-md-4 d-flex">
-          <div class="customer-service-worker">
-            <div class="worker-img">
+          <div class="customer-service-employee">
+            <div class="employee-img">
               <img src="{{ asset('landing-page/img/pexels-canva-studio-3194524.jpg') }}" class="img-fluid" alt="">
             </div>
-            <div class="worker-info">
+            <div class="employee-info">
               <h4>Michaela</h4>
               <span>Engineer</span>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente qui magni commodi doloribus quisquam consequatur doloremque nemo quia consectetur, voluptatem, asperiores est impedit dolor fuga repellendus officiis exercitationem praesentium.</p>

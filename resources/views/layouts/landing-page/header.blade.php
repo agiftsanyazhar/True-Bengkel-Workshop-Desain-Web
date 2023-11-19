@@ -14,21 +14,23 @@
         <li><a href="{{ url()->route('landing-page.index') . '#customer-service' }}">Customer Service</a></li>
         <li><a href="{{ url()->route('landing-page.index') . '#gallery' }}">Gallery</a></li>
         <li><a href="{{ url()->route('landing-page.index') . '#contact' }}">Contact</a></li>
-      </ul>
-      <ul>
-        <div class="d-flex ms-5 me-5">
-          <a href="javascript:void(0)"><i class="bi bi-search"></i></a>
-          <a href="javascript:void(0)"><i class="bi bi-cart"></i></a>
-        </div>
-      </ul>
-
-      <ul>
-        <div class="d-flex">
-          <a class="btn-login" href="javascript:void(0)">Surabaya</a>
-          <a class="btn-login" href="javascript:void(0)">Login</a>
-        </div>
+        <li class="text-center">
+          <div class="btn-group" role="group">
+            <a href="javascript:void(0)"><i class="bi bi-search"></i></a>
+            <a href="javascript:void(0)"><i class="bi bi-cart"></i></a>
+          </div>
+        </li>
+        <li class="text-center">
+          <div class="btn-group" role="group">
+            <a class="btn-login" href="javascript:void(0)">Surabaya</a>
+            <a class="btn-login" href="javascript:void(0)">Login</a>
+          </div>
+        </li>
       </ul>
     </nav>
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
   </div>
 </header>

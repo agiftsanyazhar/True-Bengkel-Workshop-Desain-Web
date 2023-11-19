@@ -81,6 +81,16 @@ a:hover {
     box-shadow: 0px 0 30px #00000052;
 }
 
+@media (max-width: 575px) {
+    .header {
+        height: 70px;
+    }
+}
+
+.header.sticked {
+    border-color: var(--color-white);
+}
+
 .header .logo h1 {
     text-transform: uppercase;
     font-size: 28px;
@@ -110,45 +120,148 @@ a:hover {
     box-shadow: 0 8px 12px #1270ce4d;
 }
 
+section {
+    scroll-margin-top: 90px;
+}
+
 /*--------------------------------------------------------------
 # Navbar
 --------------------------------------------------------------*/
-.navbar {
-    padding: 0;
+/* Desktop */
+@media (min-width: 1280px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    .navbar li {
+        position: relative;
+    }
+
+    .navbar > ul > li {
+        white-space: nowrap;
+        padding: 10px 0 10px 28px;
+    }
+
+    .navbar a,
+    .navbar a:focus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #7f7f90;
+        white-space: nowrap;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover > a {
+        color: var(--color-primary);
+    }
 }
 
-.navbar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
+@media (min-width: 1280px) {
+    .mobile-nav-show,
+    .mobile-nav-hide {
+        display: none;
+    }
 }
 
-.navbar li {
-    position: relative;
-}
+/* Mobile */
+@media (max-width: 1279px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        max-width: 400px;
+        border-left: 1px solid #666;
+        bottom: 0;
+        transition: 0.3s;
+        z-index: 9997;
+    }
 
-.navbar ul li {
-    padding: 10px 0 10px 28px;
-}
+    .navbar ul {
+        position: absolute;
+        inset: 0;
+        padding: 50px 0 10px 0;
+        margin: 0;
+        background: rgba(255, 255, 255, 0.9);
+        overflow-y: auto;
+        transition: 0.3s;
+        z-index: 9998;
+    }
 
-.navbar a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #7f7f90;
-    white-space: nowrap;
-    transition: 0.3s;
-    position: relative;
-}
+    .navbar a,
+    .navbar a:focus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+        font-size: 16px;
+        font-weight: 600;
+        color: #7f7f90;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
 
-.navbar a:hover,
-.navbar .active {
-    color: var(--color-primary);
+    .navbar a:hover,
+    .navbar li:hover > a,
+    .navbar .active,
+    .navbar .active:focus {
+        color: var(--color-primary);
+    }
+
+    .mobile-nav-show {
+        color: var(--color-secondary);
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 0;
+        transition: 0.5s;
+        z-index: 9999;
+        margin: 0 10px 0 20px;
+    }
+
+    .mobile-nav-hide {
+        color: var(--color-secondary);
+        font-size: 32px;
+        cursor: pointer;
+        line-height: 0;
+        transition: 0.5s;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 9999;
+    }
+
+    .mobile-nav-active {
+        overflow: hidden;
+    }
+
+    .mobile-nav-active .navbar {
+        right: 0;
+    }
+
+    .mobile-nav-active .navbar:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 9996;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -221,8 +334,21 @@ section {
 
 .hero .btn-login:hover {
     color: var(--color-primary);
-    border: 1px solid var(--color-primary);
     background: var(--color-white);
+}
+
+@media (max-width: 640px) {
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero .btn-login {
+        font-size: 14px;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -280,6 +406,13 @@ section {
     cursor: pointer;
     height: 100%;
     border: 0;
+}
+
+.products .slider {
+    width: auto;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
 }
 
 .products .nav-link i {
@@ -340,7 +473,7 @@ section {
 /*--------------------------------------------------------------
 # Customer Service Section
 --------------------------------------------------------------*/
-.customer-service .customer-service-worker {
+.customer-service .customer-service-employee {
     text-align: center;
     background: var(--color-white);
     border-radius: 15px;
@@ -348,32 +481,32 @@ section {
     transition: 0.3s;
 }
 
-.customer-service .customer-service-worker .worker-img img {
+.customer-service .customer-service-employee .employee-img img {
     width: 416px;
     height: 277px;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
 }
 
-.customer-service .customer-service-worker .worker-info {
+.customer-service .customer-service-employee .employee-info {
     padding: 10px 15px 20px 15px;
 }
 
-.customer-service .customer-service-worker .worker-info h4 {
+.customer-service .customer-service-employee .employee-info h4 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
     color: var(--color-black);
 }
 
-.customer-service .customer-service-worker .worker-info span {
+.customer-service .customer-service-employee .employee-info span {
     display: block;
     font-size: 15px;
     font-weight: 400;
     color: var(--color-secondary);
 }
 
-.customer-service .customer-service-worker .worker-info p {
+.customer-service .customer-service-employee .employee-info p {
     font-style: italic;
     font-size: 14px;
     padding-top: 15px;
@@ -381,7 +514,7 @@ section {
     color: var(--color-secondary);
 }
 
-.customer-service .customer-service-worker:hover {
+.customer-service .customer-service-employee:hover {
     transform: scale(1.08);
     box-shadow: 0px 0 30px #37373f26;
 }
@@ -398,9 +531,37 @@ section {
 }
 
 .contact .info iframe {
-    width: 100% !important;
-    height: 450px !important;
     border-radius: 15px;
+}
+
+.contact .info i {
+    color: var(--color-primary);
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #d3eaff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.contact .info .social-contact:hover i {
+    background: var(--color-primary);
+    color: var(--color-white);
 }
 
 /*--------------------------------------------------------------
