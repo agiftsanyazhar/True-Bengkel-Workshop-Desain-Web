@@ -86,7 +86,7 @@
       </div>
 
       <div class="mt-5 text-center">
-        <a class="btn" href="javasript:void(0)" role="button">Load More <i class="bi bi-chevron-down"></i></a>
+        <a class="btn" href="javasript:void(0)" role="button">Load More <i class="bi bi-chevron-double-down"></i></a>
       </div>
 
     </div>

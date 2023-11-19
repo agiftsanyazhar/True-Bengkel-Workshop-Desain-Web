@@ -9,7 +9,7 @@
     {{-- Navbar --}}
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a href="{{ url()->route('landing-page.index') . '#hero' }}" class="active">Home</a></li>
+        <li><a href="{{ url()->route('landing-page.index') . '#hero' }}">Home</a></li>
         <li><a href="{{ url()->route('landing-page.index') . '#products' }}">Products</a></li>
         <li><a href="{{ url()->route('landing-page.index') . '#customer-service' }}">Customer Service</a></li>
         <li><a href="{{ url()->route('landing-page.index') . '#gallery' }}">Gallery</a></li>
