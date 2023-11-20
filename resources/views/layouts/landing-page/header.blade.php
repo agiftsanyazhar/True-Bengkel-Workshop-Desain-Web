@@ -22,7 +22,7 @@
         <li class="text-center">
           <div class="btn-group" role="group">
             <a class="btn-login" href="javascript:void(0)">Surabaya</a>
-            <a class="btn-login" href="javascript:void(0)">Login</a>
+            <a class="btn-login" href="{{ route('login') }}">Login</a>
           </div>
         </li>
       </ul>

@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/login', function () {
-//     return redirect('login');
-// });
+Route::get('/login', function () {
+    return redirect('login');
+});
 
 // Route::get('/dashboard', function () {
 //     return redirect()->route('admin.bio.about-me.index');
 // })->middleware(['auth'])->name('dashboard');
 
-// require __DIR__ . '/auth.php';
+require __DIR__ . '/auth.php';

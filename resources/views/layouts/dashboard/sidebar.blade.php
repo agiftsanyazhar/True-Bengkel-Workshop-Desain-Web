@@ -26,9 +26,9 @@
         <div class="menu-title">Master Data</div>
       </a>
       <ul>
+        <li><a href="index3.html"><ion-icon name="ellipse-outline"></ion-icon>Brand</a></li>
         <li><a href="index2.html"><ion-icon name="ellipse-outline"></ion-icon>Jabatan</a></li>
         <li><a href="index3.html"><ion-icon name="ellipse-outline"></ion-icon>Tipe Motor</a></li>
-        <li><a href="index3.html"><ion-icon name="ellipse-outline"></ion-icon>Brand</a></li>
       </ul>
     </li>
     <li>
