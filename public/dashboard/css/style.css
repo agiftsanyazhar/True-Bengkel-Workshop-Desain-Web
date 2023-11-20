@@ -121,10 +121,6 @@ ion-icon {
     transition: all 0.2s;
 }
 
-.sidebar-wrapper .sidebar-header .logo-icon {
-    width: 38px;
-}
-
 .sidebar-wrapper .sidebar-header .logo-text {
     font-size: 24px;
     margin-left: 10px;
@@ -358,52 +354,6 @@ ion-icon {
     display: none;
 }
 
-.top-header .mobile-search-button {
-    display: none;
-}
-
-.top-header .navbar .searchbar {
-    position: relative;
-    width: 28%;
-}
-
-.top-header .navbar .searchbar .form-control {
-    box-shadow: none;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    border: 1px solid #e9ecef;
-    background-color: #fff;
-}
-
-.top-header .navbar .searchbar .form-control:focus {
-    background-color: #fff;
-    border-color: #c27be4;
-    box-shadow: 0 0 0 0.25rem rgba(146, 62, 185, 0.3);
-}
-
-.top-header .navbar .top-navbar-right .nav-link {
-    color: #293445;
-    font-size: 18px;
-    font-weight: 500;
-    padding-right: 0.7rem;
-    padding-left: 0.7rem;
-}
-
-.top-header .navbar .searchbar .search-icon {
-    color: #41464b;
-    font-size: 1.2rem;
-    opacity: 0.5;
-    font-size: 20px;
-}
-
-.top-header .navbar .searchbar .search-close-icon {
-    right: 2rem;
-    opacity: 0.5;
-    cursor: pointer;
-    display: none;
-    font-size: 20px;
-}
-
 .top-header .navbar .user-img {
     width: 30px;
     height: 30px;
@@ -413,22 +363,6 @@ ion-icon {
 
 .dropdown-toggle-nocaret:after {
     display: none;
-}
-
-.top-header .navbar .nav-link .notify-badge {
-    position: absolute;
-    top: 0px;
-    right: -8px;
-    color: #fff;
-    font-size: 12px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f50d0d;
-    z-index: 1;
 }
 
 .dropdown-user-setting .dropdown-menu {
@@ -466,12 +400,6 @@ ion-icon {
     border-left: 1px solid #ddd;
 }
 
-.top-header .navbar .dropdown-item:hover,
-.top-header .navbar .dropdown-item:focus {
-    color: #1e2125;
-    background-color: #f5f5f5;
-}
-
 .top-header .navbar .dropdown-menu {
     -webkit-animation: 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s normal forwards
         1 animdropdown;
@@ -505,159 +433,6 @@ ion-icon {
     }
 }
 
-.dropdown-large {
-    position: relative;
-}
-
-.dropdown-large .dropdown-menu {
-    width: 320px;
-    border: 1px solid #e9ecef;
-    padding: 0 0;
-    border-radius: 10px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.top-header .navbar .dropdown-large .dropdown-menu::after {
-    content: "";
-    width: 13px;
-    height: 13px;
-    background: #fff;
-    position: absolute;
-    top: -6px;
-    right: 16px;
-    transform: rotate(45deg);
-    border-top: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-}
-
-.top-header .navbar .dropdown-apps .dropdown-menu::after {
-    content: "";
-    width: 13px;
-    height: 13px;
-    background: #343a40;
-    position: absolute;
-    top: -6px;
-    right: 12px;
-    transform: rotate(45deg);
-    border-top: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-}
-
-.dropdown-large .msg-header {
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid #ededed;
-    background-clip: border-box;
-    text-align: left;
-    display: flex;
-    align-items: center;
-}
-
-.dropdown-large .msg-header .msg-header-title {
-    font-size: 15px;
-    color: #1c1b1b;
-    margin-bottom: 0;
-    font-weight: 500;
-}
-
-.dropdown-large .msg-header .msg-header-clear {
-    font-size: 12px;
-    color: #585858;
-    margin-bottom: 0;
-}
-
-.dropdown-large .msg-footer {
-    padding: 0.8rem 1rem;
-    color: #1c1b1b;
-    border-top: 1px solid #ededed;
-    background-clip: border-box;
-    background: 0 0;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.dropdown-large .user-online {
-    position: relative;
-}
-
-.dropdown-large .msg-name {
-    font-size: 13px;
-    margin-bottom: 0;
-}
-
-.dropdown-large .msg-info {
-    font-size: 12px;
-    margin-bottom: 0;
-}
-
-.dropdown-large .msg-avatar {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.dropdown-large .msg-time {
-    font-size: 11px;
-    margin-bottom: 0;
-    color: #919191;
-}
-
-.dropdown-large .user-online:after {
-    content: "";
-    position: absolute;
-    bottom: 1px;
-    right: 17px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px #fff;
-    background: #16e15e;
-}
-
-.dropdown-large .dropdown-menu .dropdown-item {
-    padding: 0.5rem 1.3rem;
-    border-bottom: 1px solid #ededed;
-}
-
-.header-message-list {
-    position: relative;
-    height: 360px;
-}
-
-.header-notifications-list {
-    position: relative;
-    height: 360px;
-}
-
-.dropdown-large .notify {
-    font-size: 26px;
-    text-align: center;
-    margin-right: 15px;
-}
-
-.app-box {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: #f6f6f6;
-    margin-bottom: 5px;
-}
-
-.app-title {
-    color: #fff;
-    font-size: 14px;
-}
-
-.header-notifications-list {
-    position: relative;
-    height: 332px;
-}
-
 .breadcrumb-title {
     font-size: 20px;
     border-right: 1.5px solid #ced3da;
@@ -675,7 +450,7 @@ ion-icon {
 .page-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     display: inline-block;
     padding-right: 0.5rem;
-    font-family: var(--font-default);
+    font-family: "LineIcons";
     content: "\ea5c";
 }
 
@@ -1108,204 +883,6 @@ ul.categories-list li {
     font-size: 13px;
     margin: 4px;
     display: inline-block;
-}
-
-/*--------------------------------------------------------------
-# Order Tracking
---------------------------------------------------------------*/
-.steps {
-    display: flex;
-    width: 100%;
-}
-.steps-light .step-item {
-    color: #888a8c;
-}
-.step-item {
-    flex-basis: 0;
-    flex-grow: 1;
-    transition: color 0.25s ease-in-out;
-    text-align: center;
-    text-decoration: none !important;
-}
-.steps-light .step-item.active .step-count,
-.steps-light .step-item.active .step-progress {
-    color: #ffffff;
-    background-color: var(--color-primary);
-}
-.step-item:first-child .step-progress {
-    border-radius: 0.125rem;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.steps-light .step-count,
-.steps-light .step-progress {
-    color: #2e323e;
-    background-color: #eaf0f5;
-}
-.step-progress {
-    position: relative;
-    width: 100%;
-    height: 0.25rem;
-}
-.step-count {
-    position: absolute;
-    top: -0.75rem;
-    left: 50%;
-    width: 1.625rem;
-    height: 1.625rem;
-    margin-left: -0.8125rem;
-    border-radius: 50%;
-    font-size: 0.875rem;
-    line-height: 1.625rem;
-}
-.step-label {
-    padding-top: 1.5625rem;
-}
-.step-label > i {
-    margin-top: -0.25rem;
-    margin-right: 0.425rem;
-    font-size: 1.5em;
-    vertical-align: middle;
-}
-.steps-light .step-item.active.current {
-    color: #30384a;
-}
-
-.owl-thumbs .owl-thumb-item {
-    width: 80px;
-    height: 80px;
-    margin: 0 4px;
-    padding: 2px;
-    background-color: transparent;
-    border: 1px solid rgb(0 0 0 / 12%);
-    border-radius: 4px;
-}
-
-.owl-thumbs .owl-thumb-item img {
-    width: 100%;
-}
-
-.login-box {
-    width: 30rem;
-    margin: 1.5rem auto;
-    height: auto;
-}
-
-.seperator {
-    background-color: #ffffff;
-    left: 35%;
-    padding: 0px 10px;
-}
-
-.seperator-2 {
-    background-color: #ffffff;
-    left: 45%;
-    padding: 0px 10px;
-}
-
-.options {
-    font-size: 20px;
-    color: #4c5258;
-    cursor: pointer;
-}
-
-.login-bg-overlay {
-    width: 100%;
-    height: 420px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: #8436a8;
-    background-image: linear-gradient(310deg, #7928ca, #ff0080);
-}
-
-.social-login a {
-    width: 50px;
-    height: 50px;
-}
-
-.social-login a img {
-    width: 100%;
-    border: 1px solid #e4e6eb;
-    padding: 13px;
-    border-radius: 10px;
-}
-
-.social-login-footer a {
-    color: #3c3e40;
-}
-
-.fw-500 {
-    font-weight: 500;
-}
-
-.login-menu-2 a.nav-link {
-    color: #6d6868;
-}
-
-.login-cover-wrapper {
-    width: 25rem;
-    height: 46rem;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.login-cover-img {
-    background-image: url(https://wallpaperaccess.com/full/459724.png);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    transform: skewX(-10deg);
-}
-
-.register-cover-img {
-    background-image: url(../images/authentication/register-cover-img.png);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    transform: skewX(-10deg);
-}
-
-.au-reset-password-cover {
-    background-image: url(../images/authentication/au-reset-password-cover.png);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    transform: skewX(-10deg);
-}
-
-.reset-passowrd {
-    width: auto;
-    height: 35em;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mt-8 {
-    margin-top: 12rem;
-}
-
-.au-sign-up-basic {
-    background-image: url(../images/authentication/au-sign-up-basic.png);
-    background-position: center;
-    background-size: cover;
-}
-
-.au-sign-in-basic {
-    background-image: url(../images/authentication/au-sign-in-basic.png);
-    background-position: center;
-    background-size: cover;
-}
-
-.au-reset-password-basic {
-    background-image: url(../images/authentication/au-reset-password-cover.png);
-    background-position: center;
-    background-size: cover;
 }
 
 /*--------------------------------------------------------------

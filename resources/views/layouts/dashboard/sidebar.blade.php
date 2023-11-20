@@ -2,7 +2,7 @@
 <aside class="sidebar-wrapper" data-simplebar="true">
   <div class="sidebar-header">
     <div>
-      <h6 class="logo-text text-uppercase">True Bengkel</h6>
+      <a href="javascript:"><h6 class="logo-text text-uppercase">True Bengkel</h6></a>
     </div>
     <div class="toggle-icon ms-auto"><ion-icon name="menu-sharp"></ion-icon>
     </div>
