@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-	  <link href="{{ asset('dashboard/css/pace.min.css') }}" rel="stylesheet" />
-	  <script src="{{ asset('dashboard/js/pace.min.js') }}"></script>
-
     {{-- Plugins --}}
     <link href="{{ asset('dashboard/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
     <link href="{{ asset('dashboard/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
@@ -18,7 +15,6 @@
     <link href="{{ asset('dashboard/css/bootstrap-extended.css') }}" rel="stylesheet">
     <link href="{{ asset('dashboard/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('dashboard/css/icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('dashboard/css/header-colors.css') }}" rel="stylesheet" />
 
     {{-- Google Fonts --}}
     <link rel="preconnect" href="{{ url('https://fonts.googleapis.com') }}">
@@ -29,25 +25,23 @@
   </head>
   <body>
 
-    {{--  --}}
-    <!--start wrapper-->
-      <div class="wrapper">
-        @include('layouts.dashboard.sidebar')
+    <div class="wrapper">
+      @include('layouts.dashboard.sidebar')
 
-        @include('layouts.dashboard.header')
+      @include('layouts.dashboard.header')
 
-        <div class="page-content-wrapper">
-          <div class="page-content">
+      <div class="page-content-wrapper">
+        <div class="page-content">
 
-            @include('layouts.dashboard.alert')
-            
-            @yield('content')
-          </div>
+          @include('layouts.dashboard.alert')
+          
+          @yield('content')
         </div>
-
-        @include('layouts.dashboard.footer')
-
       </div>
+
+      @include('layouts.dashboard.footer')
+
+    </div>
 
     {{-- JS Files --}}
     <script src="{{ asset('dashboard/js/jquery.min.js') }}"></script>

@@ -48,7 +48,7 @@
   </section>
 
   {{-- Products Section --}}
-  <section id="products" class="products">
+  <section class="products">
     <div class="container" >
 
       <div class="section-title">
@@ -283,7 +283,7 @@
   </section>
 
   {{-- Customer Service Section --}}
-  <section id="customer-service" class="customer-service">
+  <section class="customer-service">
     <div class="container" >
 
       <div class="section-title">
@@ -341,7 +341,7 @@
   </section>
 
   {{-- Gallery Section --}}
-  <section id="gallery" class="gallery">
+  <section class="gallery">
     <div class="container" >
 
       <div class="section-title">
@@ -396,7 +396,7 @@
   </section>
 
   {{-- Contact Section --}}
-  <section id="contact" class="contact">
+  <section class="contact">
     <div class="container">
 
       <div class="section-title">
