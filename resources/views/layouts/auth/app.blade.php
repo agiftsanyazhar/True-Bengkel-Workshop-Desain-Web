@@ -5,9 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {{-- Plugins --}}
-  <link href="{{ asset('dashboard/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-
   {{-- CSS Files --}}
   <link href="{{ asset('dashboard/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('dashboard/css/bootstrap-extended.css') }}" rel="stylesheet">
@@ -31,7 +28,6 @@
     @include('layouts.auth.footer')
 
   </div>
-  <!--end wrapper-->
 
 </body>
 

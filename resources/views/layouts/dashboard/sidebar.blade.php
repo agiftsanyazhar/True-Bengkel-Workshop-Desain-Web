@@ -20,7 +20,7 @@
 
     <li class="menu-label">Master</li>
     <li>
-      <a href="javascript:;" class="has-arrow">
+      <a href="javascript:;">
         <div class="parent-icon"><ion-icon name="clipboard-sharp"></ion-icon>
         </div>
         <div class="menu-title">Master Data</div>
@@ -50,7 +50,7 @@
 
     <li class="menu-label">Users</li>
     <li>
-      <a href="javascript:;" class="has-arrow">
+      <a href="javascript:;">
         <div class="parent-icon"><ion-icon name="people-sharp"></ion-icon>
         </div>
         <div class="menu-title">Users</div>
