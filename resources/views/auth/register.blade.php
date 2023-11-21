@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-5 col-lg-6 col-md-7 mx-auto mt-5">
-        <div class="card radius-10">
+        <div class="card">
           <div class="card-body p-4">
             <div class="text-center">
               <h4>{{ $title }}</h4>

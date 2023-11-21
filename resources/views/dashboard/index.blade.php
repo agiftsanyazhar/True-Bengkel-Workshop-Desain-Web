@@ -14,7 +14,7 @@
     
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-3">
         <div class="col">
-            <div class="card radius-10">
+            <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="widget-icon-2">
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card radius-10">
+            <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="widget-icon-2">
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card radius-10">
+            <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="widget-icon-2">
@@ -54,12 +54,12 @@
         </div>
     </div>
 
-    <div class="card radius-10">
+    <div class="card">
         <div class="card-body">
             <div class="d-flex align-items-center">
-                <h6 class="mb-0">Recent Orders</h6>
+                <h5 class="mb-0">Recent Orders</h5>
             </div>
-            <div class="table-responsive mt-2">
+            <div class="table-responsive mt-4">
                 <table class="table align-middle mb-0">
                     <thead class="table-light">
                         <tr>
