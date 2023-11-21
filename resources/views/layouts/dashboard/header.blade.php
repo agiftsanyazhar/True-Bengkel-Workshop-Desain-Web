@@ -9,15 +9,15 @@
           <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown">
             <div class="user-setting">
               {{-- <h6>{{ Auth::user()->email }} <img src="{{ asset('dashboard/images/person.png') }}" class="user-img" alt=""></h6> --}}
-              <h6> Nama<img src="{{ asset('dashboard/images/person.png') }}" class="user-img" alt=""></h6>
+              <h6>Nama <img src="{{ asset('dashboard/img/unnamed.jpg') }}" class="user-img" alt=""></h6>
             </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li>
               <a class="dropdown-item" href="#">
                 <div class="d-flex flex-row align-items-center gap-2">
-                  <img src="assets/images/avatars/06.png" alt="" class="rounded-circle" width="54" height="54">
-                  <div class="">
+                  <img src="{{ asset('dashboard/img/unnamed.jpg') }}" alt="" class="rounded-circle" width="54" height="54">
+                  <div>
                     <h6 class="mb-0 dropdown-user-name">Email</h6>
                     <small class="mb-0 dropdown-user-designation text-secondary">Role</small>
                   </div>
@@ -28,7 +28,7 @@
             <li>
               <a class="dropdown-item" href="pages-user-profile.html">
                   <div class="d-flex align-items-center">
-                    <div class=""><ion-icon name="person-outline"></ion-icon></div>
+                    <div><ion-icon name="person-outline"></ion-icon></div>
                     <div class="ms-3"><span>Profile</span></div>
                   </div>
                 </a>
@@ -36,7 +36,7 @@
             <li>
               <a class="dropdown-item" href="#">
                 <div class="d-flex align-items-center">
-                  <div class=""><ion-icon name="settings-outline"></ion-icon></div>
+                  <div><ion-icon name="settings-outline"></ion-icon></div>
                   <div class="ms-3"><span>Setting</span></div>
                 </div>
               </a>
@@ -48,7 +48,7 @@
               </form>
               <a class="dropdown-item" href="" onclick="event.preventDefault(); getElementById('formLogOut').submit();">
                 <div class="d-flex align-items-center">
-                  <div class=""><ion-icon name="log-out-outline"></ion-icon></div>
+                  <div><ion-icon name="log-out-outline"></ion-icon></div>
                   <div class="ms-3"><span>Logout</span></div>
                 </div>
               </a>

@@ -18,7 +18,7 @@ Route::get('/login', function () {
 });
 
 // Route::get('/dashboard', function () {
-//     return redirect()->route('admin.bio.about-me.index');
+//     return redirect()->route('admin.dashboard.index');
 // })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';

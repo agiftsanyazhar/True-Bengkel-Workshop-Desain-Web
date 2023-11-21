@@ -21,8 +21,8 @@
                             <ion-icon name="bag-handle-sharp"></ion-icon>
                         </div>
                     </div>
-                    <h5 class="my-3">Total Orders</h5>
-                    <p class="mb-0 mt-2">48,256<span class="float-end text-danger">-2.8%</span></p>
+                    <h5 class="my-3">Total Income</h5>
+                    <p class="mb-0 mt-2">$48,256<span class="float-end text-danger">-2.8%</span></p>
                 </div>
             </div>
         </div>
@@ -34,8 +34,8 @@
                             <ion-icon name="card-sharp"></ion-icon>
                         </div>
                     </div>
-                    <h5 class="my-3">Total Expense</h5>
-                    <p class="mb-0 mt-2">$98,246<span class="float-end text-success">+5.9%</span></p>
+                    <h5 class="my-3">Total Orders</h5>
+                    <p class="mb-0 mt-2">98,246<span class="float-end text-success">+5.9%</span></p>
                 </div>
             </div>
         </div>
@@ -47,8 +47,8 @@
                             <ion-icon name="wallet-sharp"></ion-icon>
                         </div>
                     </div>
-                    <h5 class="my-3">Total Income</h5>
-                    <p class="mb-0 mt-2">$58,653,24<span class="float-end text-success">+5.9%</span></p>
+                    <h5 class="my-3">Total Users</h5>
+                    <p class="mb-0 mt-2">58,653<span class="float-end text-success">+5.9%</span></p>
                 </div>
             </div>
         </div>
