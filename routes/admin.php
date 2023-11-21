@@ -5,6 +5,6 @@ use App\Http\Controllers\Admin\{
 };
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('master')->name('master')->group(function () {
+Route::prefix('dashboard')->name('dashboard')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('index');
 });

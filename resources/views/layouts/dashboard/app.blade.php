@@ -49,7 +49,6 @@
     <script type="module" src="{{ url('https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js') }}"></script>
 
     {{-- Plugins --}}
-    <script src="{{ asset('dashboard/js/index.js') }}"></script>
     <script src="{{ asset('dashboard/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('dashboard/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
     <script src="{{ asset('dashboard/js/table-datatable.js') }}"></script>
