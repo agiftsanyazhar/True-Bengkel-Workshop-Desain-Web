@@ -74,18 +74,8 @@ ion-icon {
     font-weight: 500;
     font-size: 14px;
     display: inline-block;
-    padding: 12px 36px;
     border-radius: 15px;
     transition: 0.5s;
-    color: var(--color-white);
-    background: var(--color-primary);
-}
-
-.btn:hover {
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    background: var(--color-white);
-    box-shadow: 0 8px 12px #1270ce4d;
 }
 
 /*--------------------------------------------------------------
@@ -719,7 +709,7 @@ ul.categories-list li {
 /*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
     .sidebar-wrapper {
         left: -300px;
     }
@@ -732,7 +722,6 @@ ul.categories-list li {
         left: 0px;
     }
 
-    /* Toggeled */
     .wrapper.toggled .sidebar-wrapper {
         left: 0px;
     }
@@ -771,4 +760,4 @@ ul.categories-list li {
         width: auto;
         height: auto;
     }
-}
+} */

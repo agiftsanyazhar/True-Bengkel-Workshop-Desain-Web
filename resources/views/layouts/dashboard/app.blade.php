@@ -12,7 +12,8 @@
     <link href="{{ asset('dashboard/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('dashboard/css/bootstrap-extended.css') }}" rel="stylesheet">
     <link href="{{ asset('dashboard/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('dashboard/css/icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('dashboard/css/icons.css') }}" rel=ons.css') }}">    <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css') }}">
+
 
     {{-- Google Fonts --}}
     <link rel="preconnect" href="{{ url('https://fonts.googleapis.com') }}">
@@ -59,10 +60,10 @@
     <script>
       function deleteDialog(url, name = '') {
         if (name == '')
-          name = 'ini';
+          name = 'this';
           Swal.fire({
-            title: 'Konfirmasi?',
-            text: 'Apakah Anda yakin ingin menghapus ' + name + '?',
+            title: 'Confirm?',
+            text: 'Are you sure you want to delete ' + name + '?',
             type: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#f73757',

@@ -12,7 +12,9 @@ class AboutController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'About';
+
+        return view('dashboard.master.about.index', $data);
     }
 
     /**
