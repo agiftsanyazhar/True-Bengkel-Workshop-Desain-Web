@@ -55,6 +55,18 @@ ion-icon {
     padding: 1.5rem;
 }
 
+.img-dashboard {
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+iframe {
+    height: 280px;
+    border-radius: 15px;
+    object-fit: contain;
+}
+
 /*--------------------------------------------------------------
 # Override Some Default BootStrap Stylings
 --------------------------------------------------------------*/
@@ -709,7 +721,7 @@ ul.categories-list li {
 /*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
-/* @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .sidebar-wrapper {
         left: -300px;
     }
@@ -760,4 +772,4 @@ ul.categories-list li {
         width: auto;
         height: auto;
     }
-} */
+}

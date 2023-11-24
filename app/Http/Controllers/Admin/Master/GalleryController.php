@@ -12,7 +12,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'Gallery';
+
+        return view('dashboard.master.gallery.index', $data);
     }
 
     /**

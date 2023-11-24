@@ -276,7 +276,7 @@
       </div>
 
       <div class="mt-5 text-end">
-        <a class="btn" href="{{ route('landing-page.products') }}" role="button">See All <i class="bi bi-chevron-double-right"></i></a>
+        <a class="btn" href="{{ route('landing-page.products.index') }}" role="button">See All <i class="bi bi-chevron-double-right"></i></a>
       </div>
 
     </div>

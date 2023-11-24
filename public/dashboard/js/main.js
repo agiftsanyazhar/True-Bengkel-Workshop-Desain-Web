@@ -1,4 +1,8 @@
 $(function () {
+    $(function () {
+        $("#menu").metisMenu();
+    });
+
     $(".nav-toggle-icon").on("click", function () {
         $(".wrapper").toggleClass("toggled");
     });
@@ -29,8 +33,16 @@ $(function () {
 
     $(".toggle-icon").click(function () {
         $(".wrapper").hasClass("toggled")
-            ? ($(".wrapper").addClass("toggled"),
+            ? ($(".wrapper").removeClass("toggled"),
               $(".sidebar-wrapper").unbind("hover"))
-            : $(".wrapper").removeClass("toggled");
+            : ($(".wrapper").addClass("toggled"),
+              $(".sidebar-wrapper").hover(
+                  function () {
+                      $(".wrapper").addClass("sidebar-hovered");
+                  },
+                  function () {
+                      $(".wrapper").removeClass("sidebar-hovered");
+                  }
+              ));
     });
 });

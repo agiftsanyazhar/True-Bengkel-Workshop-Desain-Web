@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('')->name('landing-page.')->group(function () {
     Route::get('/', [LandingPageController::class, 'index'])->name('index');
-    Route::get('/products', [LandingPageController::class, 'products'])->name('products');
+    Route::prefix('products')->name('products.')->group(function () {
+        Route::get('/', [LandingPageController::class, 'products'])->name('index');
+        Route::get('/detail', [LandingPageController::class, 'productsDetail'])->name('detail');
+    });
     Route::get('/customer-service', [LandingPageController::class, 'customerService'])->name('customer-service');
     Route::get('/gallery', [LandingPageController::class, 'gallery'])->name('gallery');
 });

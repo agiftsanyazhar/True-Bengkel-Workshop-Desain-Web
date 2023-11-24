@@ -8,7 +8,6 @@
                 <ol class="breadcrumb mb-0 p-0 align-items-center">
                     <li class="breadcrumb-item" aria-current="page"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)"></a>Master</li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)"></a>Master Data</li>
                     <li class="breadcrumb-item active" aria-current="page">{{ $title }}</li>
                 </ol>
             </nav>
@@ -27,6 +26,7 @@
                         <tr>
                             <th>#</th>
                             <th>Name</th>
+                            <th>Image</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -34,6 +34,7 @@
                         <tr>
                             <td>1</td>
                             <td>Tiger Nixon</td>
+                            <td><img src="{{ asset('landing-page/img/pexels-lisa-fotios-115558.jpg') }}" class="img-dashboard"></td>
                             <td>
                                 <div class="d-flex align-items-center gap-3 fs-6">
                                     <div class="btn-group">
@@ -66,6 +67,13 @@
                             <label class="form-label"><b>Name<span class="text-danger text-bold">*</span></b></label>
                             <input class="form-control clear-after" type="hidden" name="id" aria-label="default input example">
                             <input type="text" class="form-control" placeholder="Input Brand Name" name="name" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="formFile" class="form-label"><b>Choose Image<span class="text-danger text-bold">*</span></b></label>
+                            <input class="form-control" type="file" id="formFile" name="image">
+                            <small class="text-danger">
+                                <b>- Max. 2 MB</b><br>
+                            </small>
                         </div>
 
                         <span class="text-danger text-bold"><b>* Required</b></span>

@@ -32,6 +32,18 @@ a:hover {
     text-decoration: none;
 }
 
+iframe {
+    height: 400px;
+    object-fit: contain;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Override Some Default BootStrap Stylings
 --------------------------------------------------------------*/
@@ -47,7 +59,7 @@ a:hover {
 }
 
 .card:hover {
-    transform: scale(1.08);
+    transform: scale(1.03);
 }
 
 .btn {

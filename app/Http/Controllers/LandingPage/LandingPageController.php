@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\LandingPage;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
 {
@@ -22,6 +21,13 @@ class LandingPageController extends Controller
         $data['title'] = 'Products';
 
         return view('landing-page.products', $data);
+    }
+
+    public function productsDetail()
+    {
+        $data['title'] = 'Products Detail';
+
+        return view('landing-page.products-detail', $data);
     }
 
     public function customerService()

@@ -60,11 +60,12 @@
                 <h5 class="mb-0">Recent Orders</h5>
             </div>
             <div class="table-responsive mt-4">
-                <table class="table align-middle mb-0">
-                    <thead class="table-light">
+                <table class="table table-striped table-bordered" style="width:100%">
+                    <thead>
                         <tr>
-                            <th>#ID</th>
-                            <th>Product</th>
+                            <th>#</th>
+                            <th>Order Code</th>
+                            <th>Spare Part</th>
                             <th>Quantity</th>
                             <th>Price</th>
                             <th>Date</th>
@@ -74,7 +75,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>#89742</td>
+                            <td>1</td>
+                            <td>ODR-22112023090241</td>
                             <td>
                                 <div class="d-flex align-items-center gap-3">
                                     <div class="product-box border">

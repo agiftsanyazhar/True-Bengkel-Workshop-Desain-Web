@@ -6,7 +6,7 @@
     <div class="container" >
 
       <div class="section-title">
-        <p>Gallery</p>
+        <p>{{ $title }}</p>
       </div>
 
       <div class="row gy-5">

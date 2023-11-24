@@ -7,12 +7,14 @@
     {{-- Plugins --}}
     <link href="{{ asset('dashboard/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
     <link href="{{ asset('dashboard/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('dashboard/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
 
     {{-- CSS Files --}}
     <link href="{{ asset('dashboard/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('dashboard/css/bootstrap-extended.css') }}" rel="stylesheet">
     <link href="{{ asset('dashboard/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('dashboard/css/icons.css') }}" rel=ons.css') }}">    <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css') }}">
+    <link href="{{ asset('dashboard/css/icons.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css') }}">
 
 
     {{-- Google Fonts --}}
@@ -45,6 +47,7 @@
     {{-- JS Files --}}
     <script src="{{ asset('dashboard/js/jquery.min.js') }}"></script>
     <script src="{{ asset('dashboard/plugins/simplebar/js/simplebar.min.js') }}"></script>
+    <script src="{{ asset('dashboard/plugins/metismenu/js/metisMenu.min.js') }}"></script>
     <script src="{{ asset('dashboard/js/bootstrap.bundle.min.js') }}"></script>
     <script type="module" src="{{ url('https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js') }}"></script>
 

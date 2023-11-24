@@ -20,7 +20,7 @@
 
     <li class="menu-label">Master</li>
     <li>
-      <a href="javascript:void(0)">
+      <a href="javascript:void(0)" class="has-arrow">
         <div class="parent-icon"><ion-icon name="clipboard-sharp"></ion-icon>
         </div>
         <div class="menu-title">Master Data</div>
@@ -84,7 +84,7 @@
       </a>
     </li>
     <li>
-      <a href="javascript:void(0)">
+      <a href="javascript:void(0)" class="has-arrow">
         <div class="parent-icon"><ion-icon name="people-sharp"></ion-icon>
         </div>
         <div class="menu-title">Users</div>

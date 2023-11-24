@@ -22,7 +22,7 @@
                                     onclick="openFormDialog('modalForm', 'add')"><ion-icon name="add-sharp"></ion-icon></button></h5>
             </div>
             <div class="table-responsive mt-4">
-                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                <table class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -70,6 +70,14 @@
                             <label class="form-label"><b>Name<span class="text-danger text-bold">*</span></b></label>
                             <input class="form-control clear-after" type="hidden" name="id" aria-label="default input example">
                             <input type="text" class="form-control" placeholder="Input Brand Name" name="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label"><b>Gaji Pokok<span class="text-danger text-bold">*</span></b></label>
+                            <input type="number" class="form-control" min="1" placeholder="Input Gaji Pokok" name="gaji_pokok" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label"><b>Tunjangan</b></label>
+                            <input type="number" class="form-control" min="1" placeholder="Input Tunjangan" name="tunjangan">
                         </div>
 
                         <span class="text-danger text-bold"><b>* Required</b></span>

@@ -10,7 +10,7 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li><a href="{{ url()->route('landing-page.index') }}" class="{{ request()->is('/') ? 'active' : '' }}">Home</a></li>
-        <li><a href="{{ url()->route('landing-page.products') }}" class="{{ request()->is('products') ? 'active' : '' }}">Products</a></li>
+        <li><a href="{{ url()->route('landing-page.products.index') }}" class="{{ request()->is('products') || request()->is('products/detail') ? 'active' : '' }}">Products</a></li>
         <li><a href="{{ url()->route('landing-page.customer-service') }}" class="{{ request()->is('customer-service') ? 'active' : '' }}">Customer Service</a></li>
         <li><a href="{{ url()->route('landing-page.gallery') }}" class="{{ request()->is('gallery') ? 'active' : '' }}">Gallery</a></li>
         <li>
