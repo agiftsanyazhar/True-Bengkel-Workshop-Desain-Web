@@ -12,7 +12,9 @@ class SparePartController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'Spare Part';
+
+        return view('dashboard.database.spare-part.index', $data);
     }
 
     /**

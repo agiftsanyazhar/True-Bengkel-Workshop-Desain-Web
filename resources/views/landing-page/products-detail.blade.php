@@ -18,7 +18,6 @@
               <img src="{{ asset('landing-page/img/pexels-anthony-133627.jpg') }}" style="height: 500px" class="card-img-top">
               <div class="card-body">
                 <h4>Lifebuoy</h4>
-                <h5 class="description">Headline</h5>
                 <h3 class="price">Rp 595.000</h3>
                 <hr>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>

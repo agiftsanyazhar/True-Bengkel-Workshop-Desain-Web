@@ -94,7 +94,7 @@
             </div>
 
             <div class="col-md-4 products-item">
-              <a href="javascript:void(0)">
+              <a href="{{ route('landing-page.products.detail') }}">
                 <div class="card">
                   <img src="{{ asset('landing-page/img/pexels-dietmar-janssen-396007.jpg') }}" class="card-img-top">
                   <div class="card-body">
@@ -107,7 +107,7 @@
             </div>
 
             <div class="col-md-4 products-item">
-              <a href="javascript:void(0)">
+              <a href="{{ route('landing-page.products.detail') }}">
                 <div class="card">
                   <img src="{{ asset('landing-page/img/pexels-lex-ger-3642618.jpg') }}" class="card-img-top">
                   <div class="card-body">
@@ -120,7 +120,7 @@
             </div>
 
             <div class="col-md-4 products-item">
-              <a href="javascript:void(0)">
+              <a href="{{ route('landing-page.products.detail') }}">
                 <div class="card">
                   <img src="{{ asset('landing-page/img/2.3.-Sasis-Backbone-1000x569.jpg') }}" class="card-img-top">
                   <div class="card-body">
@@ -133,7 +133,7 @@
             </div>
 
             <div class="col-md-4 products-item">
-              <a href="javascript:void(0)">
+              <a href="{{ route('landing-page.products.detail') }}">
                 <div class="card">
                   <img src="{{ asset('landing-page/img/pexels-miguel-á-padriñán-3785927.jpg') }}" class="card-img-top">
                   <div class="card-body">
@@ -146,7 +146,7 @@
             </div>
             
             <div class="col-md-4 products-item">
-              <a href="javascript:void(0)">
+              <a href="{{ route('landing-page.products.detail') }}">
                 <div class="card">
                   <img src="{{ asset('landing-page/img/pexels-saulo-leite-18262240.jpg') }}" class="card-img-top">
                   <div class="card-body">

@@ -7,8 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0 align-items-center">
                     <li class="breadcrumb-item" aria-current="page"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)"></a>Master</li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)"></a>Master Data</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)"></a>Database</li>
                     <li class="breadcrumb-item active" aria-current="page">{{ $title }}</li>
                 </ol>
             </nav>
@@ -26,14 +25,37 @@
                     <thead>
                         <tr>
                             <th>#</th>
+                            <th>Spare Part Code</th>
                             <th>Name</th>
+                            <th>Brand</th>
+                            <th>Tipe Motor</th>
+                            <th>Headline</th>
+                            <th>Description</th>
+                            <th>Stock</th>
+                            <th>Price</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Tiger Nixon</td>
+                            <td>12191-K15-900</td>
+                            <td>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="product-box border">
+                                        <img src="assets/images/products/11.png" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <h6 class="product-name mb-1">Smart Mobile Phone</h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Yamaha</td>
+                            <td>Scooter</td>
+                            <td>Lorem ipsum dolor sit amet.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, deserunt!</td>
+                            <td>2023</td>
+                            <td>Rp 150.000</td>
                             <td>
                                 <div class="d-flex align-items-center gap-3 fs-6">
                                     <div class="btn-group">

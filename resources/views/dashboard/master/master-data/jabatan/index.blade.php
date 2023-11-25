@@ -22,7 +22,7 @@
                                     onclick="openFormDialog('modalForm', 'add')"><ion-icon name="add-sharp"></ion-icon></button></h5>
             </div>
             <div class="table-responsive mt-4">
-                <table class="table table-striped table-bordered" style="width:100%">
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -36,8 +36,8 @@
                         <tr>
                             <td>1</td>
                             <td>Tiger Nixon</td>
-                            <td>Tiger Nixon</td>
-                            <td>Tiger Nixon</td>
+                            <td>Rp 12.000.000</td>
+                            <td>Rp 5.000.000</td>
                             <td>
                                 <div class="d-flex align-items-center gap-3 fs-6">
                                     <div class="btn-group">

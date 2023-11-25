@@ -12,7 +12,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'Order';
+
+        return view('dashboard.order.index', $data);
     }
 
     /**

@@ -12,7 +12,9 @@ class KendaraanController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'Kendaraan';
+
+        return view('dashboard.database.kendaraan.index', $data);
     }
 
     /**

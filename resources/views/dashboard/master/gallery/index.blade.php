@@ -21,23 +21,31 @@
                                     onclick="openFormDialog('modalForm', 'add')"><ion-icon name="add-sharp"></ion-icon></button></h5>
             </div>
             <div class="table-responsive mt-4">
-                <table class="table table-striped table-bordered" style="width:100%">
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>Name</th>
-                            <th>Image</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Tiger Nixon</td>
-                            <td><img src="{{ asset('landing-page/img/pexels-lisa-fotios-115558.jpg') }}" class="img-dashboard"></td>
+                            <td>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="product-box border">
+                                        <img src="assets/images/products/11.png" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <h6 class="product-name mb-1">Smart Mobile Phone</h6>
+                                    </div>
+                                </div>
+                            </td>
                             <td>
                                 <div class="d-flex align-items-center gap-3 fs-6">
                                     <div class="btn-group">
+                                        <a href="javascript:;" class="btn btn-primary"><ion-icon name="eye-sharp"></ion-icon></a>
                                         <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal"
                                                     data-bs-target="#modalForm"
                                                     onclick="openFormDialog('modalForm', 'edit', '')"><ion-icon name="pencil-sharp"></ion-icon></button>

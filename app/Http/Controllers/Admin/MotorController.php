@@ -12,7 +12,9 @@ class MotorController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'Motor';
+
+        return view('dashboard.database.motor.index', $data);
     }
 
     /**

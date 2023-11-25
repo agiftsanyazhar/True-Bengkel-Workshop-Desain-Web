@@ -7,8 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0 align-items-center">
                     <li class="breadcrumb-item" aria-current="page"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)"></a>Master</li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)"></a>Master Data</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)"></a>Database</li>
                     <li class="breadcrumb-item active" aria-current="page">{{ $title }}</li>
                 </ol>
             </nav>
@@ -27,16 +26,21 @@
                         <tr>
                             <th>#</th>
                             <th>Name</th>
+                            <th>Brand</th>
+                            <th>Tipe Motor</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Tiger Nixon</td>
+                            <td>792347</td>
+                            <td>Yamaha</td>
+                            <td>Scooter</td>
                             <td>
                                 <div class="d-flex align-items-center gap-3 fs-6">
                                     <div class="btn-group">
+                                        <a href="javascript:;" class="btn btn-primary"><ion-icon name="eye-sharp"></ion-icon></a>
                                         <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal"
                                                     data-bs-target="#modalForm"
                                                     onclick="openFormDialog('modalForm', 'edit', '')"><ion-icon name="pencil-sharp"></ion-icon></button>
