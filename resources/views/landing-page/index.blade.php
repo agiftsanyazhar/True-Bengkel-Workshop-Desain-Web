@@ -2,7 +2,7 @@
 
 @section('container')
   {{-- Hero Section --}}
-  <section id="hero" class="hero d-flex align-items-center" style="background-image: url('{{ asset('landing-page/img/pexels-mike-bird-190574.jpg') }}');">
+  <section id="hero" class="hero d-flex align-items-center" style="background-image: url('{{ 'http://true-bengkel-v2.test/storage/' . $about->hero_image }}');">
     <div class="container">
       <div class="row justify-content-between gy-5">
         <div class="col-md-12 d-flex flex-column justify-content-center align-items-center text-center">
@@ -25,7 +25,7 @@
       </div>
 
       <div class="row gy-5">
-        <div class="col-md-5 about-img" style="background-image: url({{ asset('landing-page/img/pexels-pixabay-73833.jpg') }});">
+        <div class="col-md-5 about-img" style="background-image: url({{ 'http://true-bengkel-v2.test/storage/' . $about->about_image }});">
         </div>
         <div class="col-md-7 d-flex align-items-center">
           <div class="content ps-0 ps-md-5">
@@ -164,41 +164,16 @@
 
       <div class="row gy-5">
 
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-pixabay-162553.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 1</h4>
+        @foreach ($gallery as $item)
+          <div class="col-md-3 products-item">
+            <div class="card">
+              <img src="{{ 'http://true-bengkel-v2.test/storage/' . $item->image }}" class="card-img-top">
+              <div class="card-body text-center">
+                <h4>{{ $item->name }}</h4>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-lisa-fotios-115558.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 2</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-pavel-chernonogov-2381463.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 3</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-suntorn-somtong-1029243.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 4</h4>
-            </div>
-          </div>
-        </div>
+        @endforeach
 
       </div>
 
@@ -225,7 +200,7 @@
               <div class="social-contact">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>Institut Teknologi Sepuluh Nopember, Kampus Jl. Raya ITS, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111, Indonesia</p>
+                <p>{{ $about->location }}</p>
               </div>
             </a>
 
@@ -233,7 +208,7 @@
               <div class="social-contact">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>contact@true-bengkel.com</p>
+                <p>{{ $about->email }}</p>
               </div>
             </a>
 
@@ -241,7 +216,7 @@
               <div class="social-contact">
                 <i class="bi bi-telephone"></i>
                 <h4>Call Us:</h4>
-                <p>+628123456789</p>
+                <p>{{ $about->phone }}</p>
               </div>
             </a>
 
@@ -249,7 +224,7 @@
               <div class="social-contact">
                 <i class="bi bi-clock"></i>
                 <h4>Opening Hours:</h4>
-                <p><b>Mon-Sat:</b> 8AM-4PM; <b>Sunday:</b> Closed</p>
+                <p>{{ $about->opening_hours }}; {{ $about->closing_hours }}</p>
               </div>
             </a>
             
@@ -259,7 +234,7 @@
         
         <div class="col-md-7 mt-5 d-flex align-items-stretch">
           <div class="info">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16673.13208541504!2d112.7937557!3d-7.275847100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa10ea2ae883%3A0xbe22c55d60ef09c7!2sPoliteknik%20Elektronika%20Negeri%20Surabaya!5e1!3m2!1sid!2sus!4v1696674447535!5m2!1sid!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            {!! $about->map !!}
           </div>
         </div>
 

@@ -11,77 +11,16 @@
 
       <div class="row gy-5">
 
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-pixabay-162553.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 1</h4>
+        @foreach ($gallery as $item)
+          <div class="col-md-3 products-item">
+            <div class="card">
+              <img src="{{ 'http://true-bengkel-v2.test/storage/' . $item->image }}" class="card-img-top">
+              <div class="card-body text-center">
+                <h4>{{ $item->name }}</h4>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-lisa-fotios-115558.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 2</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-pavel-chernonogov-2381463.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 3</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-suntorn-somtong-1029243.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 4</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-pixabay-162553.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 5</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-lisa-fotios-115558.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 6</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-pavel-chernonogov-2381463.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 7</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-3 products-item">
-          <div class="card">
-            <img src="{{ asset('landing-page/img/pexels-suntorn-somtong-1029243.jpg') }}" class="card-img-top">
-            <div class="card-body text-center">
-              <h4>Image 8</h4>
-            </div>
-          </div>
-        </div>
+        @endforeach
 
       </div>
 

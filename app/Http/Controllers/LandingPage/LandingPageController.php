@@ -73,6 +73,10 @@ class LandingPageController extends Controller
     {
         $data['title'] = 'Gallery';
 
+        $gallery = $this->getData('gallery');
+
+        $data['gallery'] = $gallery->data;
+
         return view('landing-page.gallery', $data);
     }
 }
