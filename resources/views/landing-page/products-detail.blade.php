@@ -15,7 +15,7 @@
 
           <div class="products-item">
             <div class="card">
-              <img src="{{ 'http://true-bengkel-v2.test/storage/' . $sparePart->image }}" style="height: 500px" class="card-img-top">
+              <img src="{{ 'http://true-bengkel-v2.test/storage/' . $sparePart->image }}" style="height: 350px; object-fit: contain;" class="card-img-top">
               <div class="card-body">
                 <h4>{{ $sparePart->name }}</h4>
                 <h3 class="price">Rp {{ number_format($sparePart->price, 0, ',', '.') }}</h3>
@@ -35,7 +35,7 @@
               <div class="my-3">
                 <div class="input-group">
                   <button class="btn btn-number" type="button" data-type="minus" data-field="qty"><i class="bi bi-dash-lg"></i></button>
-                  <input type="number" class="form-control input-number text-center" min="1" max="100" value="1" name="qty">
+                  <input type="number" class="form-control input-number text-center" min="1" max="100" value="1" name="qty" id="qtyInput">
                   <button class="btn btn-number" type="button" data-type="plus" data-field="qty"><i class="bi bi-plus-lg"></i></button>
                 </div>
                 <small>Stock: {{ $sparePart->stock }}</small>
@@ -46,7 +46,7 @@
               <div class="row">
                 <div class="col-md-12 d-flex justify-content-between">
                   <h6>Total</h6>
-                  <h4>Rp 1.300.000</h4>
+                  <h4 id="totalPrice"></h4>
                 </div>
               </div>
               

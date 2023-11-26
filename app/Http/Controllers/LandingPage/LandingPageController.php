@@ -38,6 +38,12 @@ class LandingPageController extends Controller
     {
         $data['title'] = 'Products';
 
+        $sparePart = $this->getData('spare-part');
+        $brand = $this->getData('brand');
+
+        $data['sparePart'] = $sparePart->data;
+        $data['brand'] = $brand->data;
+
         return view('landing-page.products', $data);
     }
 
@@ -55,6 +61,10 @@ class LandingPageController extends Controller
     public function customerService()
     {
         $data['title'] = 'Customer Serivce';
+
+        $pegawai = $this->getData('pegawai');
+
+        $data['pegawai'] = $pegawai->data;
 
         return view('landing-page.customer-service', $data);
     }

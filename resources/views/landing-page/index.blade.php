@@ -95,7 +95,7 @@
                         <div class="card">
                           <img src="{{ 'http://true-bengkel-v2.test/storage/' . $subItem->image }}" class="card-img-top">
                           <div class="card-body">
-                            <h4>{{ Str::limit($subItem->name, 22) }}</h4>
+                            <h4>{{ Str::limit($subItem->name, 20) }}</h4>
                             <p class="description">{{ $subItem->headline }}</p>
                             <p class="price">Rp {{ number_format($subItem->price, 0, ',', '.') }}</p>
                           </div>
@@ -111,7 +111,7 @@
             @endphp
           @endunless
         @endforeach
-    </div>
+      </div>
 
       <div class="mt-5 text-end">
         <a class="btn" href="{{ route('landing-page.products.index') }}" role="button">See All <i class="bi bi-chevron-double-right"></i></a>
@@ -130,44 +130,20 @@
 
       <div class="row gy-5">
 
-        <div class="col-md-4 d-flex">
-          <div class="customer-service-employee">
-            <div class="employee-img">
-              <img src="{{ asset('landing-page/img/pexels-thisisengineering-3862614.jpg') }}" class="img-fluid" alt="">
-            </div>
-            <div class="employee-info">
-              <h4>Sarah</h4>
-              <span>CEO</span>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente qui magni commodi doloribus quisquam consequatur doloremque nemo quia consectetur, voluptatem, asperiores est impedit dolor fuga repellendus officiis exercitationem praesentium.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 d-flex">
-          <div class="customer-service-employee">
-            <div class="employee-img">
-              <img src="{{ asset('landing-page/img/pexels-andrea-piacquadio-3771045.jpg') }}" class="img-fluid" alt="">
-            </div>
-            <div class="employee-info">
-              <h4>Alex</h4>
-              <span>CTO</span>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente qui magni commodi doloribus quisquam consequatur doloremque nemo quia consectetur, voluptatem, asperiores est impedit dolor fuga repellendus officiis exercitationem praesentium.</p>
+        @foreach ($pegawai as $item)
+          <div class="col-md-4 d-flex">
+            <div class="customer-service-employee">
+              <div class="employee-img">
+                <img src="{{  $item->image ? 'http://true-bengkel-v2.test/storage/' . $item->image : asset('landing-page/img/unnamed.jpg') }}" style="{{ !$item->image ? 'object-fit: contain;' : '' }}" class="img-fluid" alt="">
+              </div>
+              <div class="employee-info">
+                <h4>{{ $item->name }}</h4>
+                <span>{{ $item->jabatan->name }}</span>
+                <p>{{ $item->description }}</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="col-md-4 d-flex">
-          <div class="customer-service-employee">
-            <div class="employee-img">
-              <img src="{{ asset('landing-page/img/pexels-canva-studio-3194524.jpg') }}" class="img-fluid" alt="">
-            </div>
-            <div class="employee-info">
-              <h4>Michaela</h4>
-              <span>Engineer</span>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente qui magni commodi doloribus quisquam consequatur doloremque nemo quia consectetur, voluptatem, asperiores est impedit dolor fuga repellendus officiis exercitationem praesentium.</p>
-            </div>
-          </div>
-        </div>
+        @endforeach
 
       </div>
 
