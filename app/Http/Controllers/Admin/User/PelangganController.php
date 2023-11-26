@@ -12,7 +12,9 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'Pelanggan';
+
+        return view('dashboard.user.pelanggan.index', $data);
     }
 
     /**

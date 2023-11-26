@@ -12,7 +12,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'Admin';
+
+        return view('dashboard.user.admin.index', $data);
     }
 
     /**

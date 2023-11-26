@@ -12,7 +12,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'All User';
+
+        return view('dashboard.user.all-user.index', $data);
     }
 
     /**

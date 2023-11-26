@@ -12,7 +12,9 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'Pegawai';
+
+        return view('dashboard.user.pegawai.index', $data);
     }
 
     /**
