@@ -35,8 +35,8 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Tiger Nixon</td>
-                            <td>Rp 12.000.000</td>
+                            <td>Kepala Bangkel</td>
+                            <td>Rp 10.000.000</td>
                             <td>Rp 5.000.000</td>
                             <td>
                                 <div class="d-flex align-items-center gap-3 fs-6">

@@ -31,7 +31,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             @endif
-            <form class="form-body row g-3" action="{{ route('reset-password.submit') }}" method="POST">
+            <form class="form-body row g-3" action="{{ route('reset-password.submit') }}" method="GET">
               @csrf
               <div class="col-12">
                 <label for="inputEmail" class="form-label">Email</label>

@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\{
+    AuthenticatedSessionController,
     ForgetPasswordController,
-    LoginController,
     RegisterController,
     ResetPasswordController,
 };
@@ -11,14 +11,14 @@ use Illuminate\Support\Facades\Route;
 // --------------------------------------------------------------------------
 // Login & Logout
 // --------------------------------------------------------------------------
-Route::get('/login', [LoginController::class, 'index'])
+Route::get('/login', [AuthenticatedSessionController::class, 'index'])
     ->middleware('guest')
     ->name('login');
 
-Route::post('/login', [LoginController::class, 'store'])
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])
     ->middleware('guest');
 
-Route::post('/logout', [LoginController::class, 'destroy'])
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->middleware('auth')
     ->name('logout');
 

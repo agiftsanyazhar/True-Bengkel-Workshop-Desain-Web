@@ -6,12 +6,10 @@
       <div class="col-md-3 footer-logo d-flex">
         <div>
           <h2>True Bengkel</h4>
+          <p>{{ $about->location }}</p>
           <p>
-            Institut Teknologi Sepuluh Nopember, Kampus Jl. Raya ITS, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111, Indonesia
-          </p>
-          <p>
-            <strong>Phone:</strong> +628123456789<br>
-            <strong>Email:</strong> contact@true-bengkel.com<br>
+            <strong>Phone: </strong>{{ $about->phone }}<br>
+            <strong>Email: </strong>{{ $about->email }}<br>
           </p>
         </div>
 

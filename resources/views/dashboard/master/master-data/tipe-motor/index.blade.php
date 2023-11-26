@@ -33,7 +33,7 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Tiger Nixon</td>
+                            <td>Scooter</td>
                             <td>
                                 <div class="d-flex align-items-center gap-3 fs-6">
                                     <div class="btn-group">

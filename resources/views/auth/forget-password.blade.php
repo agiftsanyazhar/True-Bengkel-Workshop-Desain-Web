@@ -10,7 +10,7 @@
             <div class="text-center">
               <h4>{{ $title }}</h4>
             </div>
-            <form class="form-body row g-3" action="{{ route('forget-password.submit') }}" method="POST">
+            <form class="form-body row g-3" action="{{ route('forget-password.submit') }}" method="GET">
               <div class="col-12">
                 <label for="inputEmail" class="form-label">Email</label>
                 <input type="email" class="form-control" id="inputEmail" required>

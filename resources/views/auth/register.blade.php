@@ -10,7 +10,7 @@
             <div class="text-center">
               <h4>{{ $title }}</h4>
             </div>
-            <form class="form-body row g-3" action="{{ route('register') }}" method="POST">
+            <form class="form-body row g-3" action="{{ route('register') }}" method="GET">
               <div class="col-12">
                 <label for="inputName" class="form-label">Name</label>
                 <input type="text" class="form-control" id="inputName" required>

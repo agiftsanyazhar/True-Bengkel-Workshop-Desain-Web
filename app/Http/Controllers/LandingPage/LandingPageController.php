@@ -9,7 +9,7 @@ class LandingPageController extends Controller
 {
     private function getData($endpoint)
     {
-        return Http::get("http://true-bengkel-v2.test/api/{$endpoint}")->object();
+        return Http::get(url('http://true-bengkel-v2.test/api/' . $endpoint))->object();
     }
 
     /**
@@ -31,7 +31,8 @@ class LandingPageController extends Controller
         $data['pegawai'] = $pegawai->data;
         $data['gallery'] = $gallery->data;
 
-        return view('landing-page.index', $data);
+        return view('landing-page.index', $data)
+            ->with('footerView', view('layouts.landing-page.footer', $data));
     }
 
     public function products()

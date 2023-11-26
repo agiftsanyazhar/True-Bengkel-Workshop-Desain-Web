@@ -81,7 +81,7 @@
                             <td>
                                 <div class="d-flex align-items-center gap-3 fs-6">
                                     <div class="btn-group">
-                                        <a href="javascript:;" class="btn btn-primary"><ion-icon name="eye-sharp"></ion-icon></a>
+                                        <a href="javascript:void(0)" class="btn btn-primary"><ion-icon name="eye-sharp"></ion-icon></a>
                                     </div>
                                 </div>
                             </td>

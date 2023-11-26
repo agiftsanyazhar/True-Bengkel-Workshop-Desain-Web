@@ -31,7 +31,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             @endif
-            <form class="form-body row g-3" action="{{ route('login') }}" method="POST">
+            <form class="form-body row g-3" action="{{ route('admin.dashboard.index') }}" method="GET">
               @csrf
               <div class="col-12">
                 <label for="inputEmail" class="form-label">Email</label>
@@ -46,7 +46,7 @@
               </div>
               <div class="col-12 col-lg-12">
                 <div class="d-grid">
-                  <button type="button" class="btn btn-primary">{{ $title }}</button>
+                  <button type="submit" class="btn btn-primary">{{ $title }}</button>
                 </div>
               </div>
               <div class="col-12 col-lg-12 text-center">
