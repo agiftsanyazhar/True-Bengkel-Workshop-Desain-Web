@@ -15,12 +15,12 @@
 
           <div class="products-item">
             <div class="card">
-              <img src="{{ asset('landing-page/img/pexels-anthony-133627.jpg') }}" style="height: 500px" class="card-img-top">
+              <img src="{{ 'http://true-bengkel-v2.test/storage/' . $sparePart->image }}" style="height: 500px" class="card-img-top">
               <div class="card-body">
-                <h4>Lifebuoy</h4>
-                <h3 class="price">Rp 595.000</h3>
+                <h4>{{ $sparePart->name }}</h4>
+                <h3 class="price">Rp {{ number_format($sparePart->price, 0, ',', '.') }}</h3>
                 <hr>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p>{{ $sparePart->description }}</p>
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@
                   <input type="number" class="form-control input-number text-center" min="1" max="100" value="1" name="qty">
                   <button class="btn btn-number" type="button" data-type="plus" data-field="qty"><i class="bi bi-plus-lg"></i></button>
                 </div>
-                <small>Stock: 245</small>
+                <small>Stock: {{ $sparePart->stock }}</small>
               </div>
 
               <hr>

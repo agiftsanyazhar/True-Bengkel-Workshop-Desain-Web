@@ -6,8 +6,8 @@
     <div class="container">
       <div class="row justify-content-between gy-5">
         <div class="col-md-12 d-flex flex-column justify-content-center align-items-center text-center">
-          <h2>Welcome to True Bengkel</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum esse fuga amet perspiciatis assumenda dignissimos, itaque adipisci accusamus saepe asperiores. Quae totam facere, id recusandae libero ipsam ratione rem at officiis, quibusdam tempore cum odit impedit dignissimos, quo sequi delectus possimus deleniti distinctio aperiam sint inventore! Quibusdam vel esse at.</p>
+          <h2>Welcome to {{ $about->name }}</h2>
+          <p>{{ $about->headline }}</p>
           <div class="d-flex">
             <a href="{{ url()->route('landing-page.index') . '#about' }}" class="btn-login">Get Started</a>
           </div>
@@ -29,17 +29,7 @@
         </div>
         <div class="col-md-7 d-flex align-items-center">
           <div class="content ps-0 ps-md-5">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ducimus quisquam aperiam eveniet possimus voluptatum fugit delectus omnis autem unde?
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, illo dignissimos magnam doloribus veniam quia quos illum fuga saepe quibusdam fugiat! Consectetur, temporibus nihil recusandae officia dicta, quis optio odio praesentium earum eum maxime totam quam. Quidem tempore incidunt quasi ut ipsum porro aspernatur ab fuga saepe, accusamus molestias distinctio.
-            </p>
+            {!! $about->description !!}
           </div>
         </div>
       </div>
@@ -59,221 +49,69 @@
 
         <div class="slider">
 
-          <li class="nav-item">
-            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#products-boats">
-              <h4>Boats</h4>
-            </a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#products-cars">
-              <h4>Cars</h4>
-            </a>
-  
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#products-motorcycles">
-              <h4>Motorcycles</h4>
-            </a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#products-trucks">
-              <h4>Trucks</h4>
-            </a>
-          </li>
+          @php
+            $displayedSlugs = [];
+          @endphp
+
+          @foreach ($sparePart as $key => $item)
+            @php
+              $slug = $item->slug;
+            @endphp
+
+            @unless(in_array($slug, $displayedSlugs))
+              <li class="nav-item">
+                <a class="nav-link @if ($key === 0) active show @endif" data-bs-toggle="tab" data-bs-target="#{{ $item->slug }}">
+                  <h4>{{ $item->brand->name }}</h4>
+                </a>
+              </li>
+
+              @php
+                $displayedSlugs[] = $slug;
+              @endphp
+            @endunless
+          @endforeach
 
         </div>
-
 
       </ul>
 
       <div class="tab-content">
+        @php
+          $displayedSlugs = [];
+        @endphp
 
-        <div class="tab-pane fade active show" id="products-boats">
+        @foreach ($sparePart as $key => $item)
+          @php
+            $slug = $item->slug;
+          @endphp
 
-          <div class="row gy-5">
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-anthony-133627.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Lifebuoy</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 595.000</p>
-                  </div>
-                </div>
-              </a>
+          @unless(in_array($slug, $displayedSlugs))
+            <div class="tab-pane fade @if ($key === 0) active show @endif" id="{{ $item->slug }}">
+              <div class="row gy-5">
+                @foreach ($sparePart as $subItem)
+                  @if ($subItem->slug === $slug)
+                    <div class="col-md-3 products-item">
+                      <a href="{{ route('landing-page.products.detail', ['id' => $subItem->id]) }}">
+                        <div class="card">
+                          <img src="{{ 'http://true-bengkel-v2.test/storage/' . $subItem->image }}" class="card-img-top">
+                          <div class="card-body">
+                            <h4>{{ Str::limit($subItem->name, 22) }}</h4>
+                            <p class="description">{{ $subItem->headline }}</p>
+                            <p class="price">Rp {{ number_format($subItem->price, 0, ',', '.') }}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  @endif
+                @endforeach
+              </div>
             </div>
-
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="products-cars">
-
-          <div class="row gy-5">
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-dietmar-janssen-396007.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Airbag</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 1.295.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-lex-ger-3642618.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Brake</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 995.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/2.3.-Sasis-Backbone-1000x569.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Chassis</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 995.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-miguel-á-padriñán-3785927.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Gearbox</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 1.295.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-saulo-leite-18262240.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Steering Wheel</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 895.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-mike-bird-241197.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Tire</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 1.495.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-mike-bird-111766.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Wheel</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 595.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="products-motorcycles">
-
-          <div class="row gy-5">
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-pixabay-163210.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Aprilia</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 895.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-pixabay-37527.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Helmet</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 1.495.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-pixabay-39693.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>Yamaha</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 595.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="products-trucks">
-
-          <div class="row gy-5">
-
-            <div class="col-md-3 products-item">
-              <a href="{{ route('landing-page.products.detail') }}">
-                <div class="card">
-                  <img src="{{ asset('landing-page/img/pexels-screen-post-12712470.jpg') }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4>volvo</h4>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <p class="price">Rp 595.000</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
+            @php
+                $displayedSlugs[] = $slug;
+            @endphp
+          @endunless
+        @endforeach
+    </div>
 
       <div class="mt-5 text-end">
         <a class="btn" href="{{ route('landing-page.products.index') }}" role="button">See All <i class="bi bi-chevron-double-right"></i></a>
