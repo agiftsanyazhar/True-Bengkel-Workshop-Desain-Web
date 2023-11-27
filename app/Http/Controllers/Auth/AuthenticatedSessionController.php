@@ -27,7 +27,6 @@ class AuthenticatedSessionController extends Controller
     public function store(Request $request)
     {
         try {
-            // dd($request);
             $email = $request->email;
             $password = $request->password;
 
@@ -40,11 +39,6 @@ class AuthenticatedSessionController extends Controller
                     'password' => $password,
                 ],
             ]);
-
-            $contents = $response->getBody()->getContents();
-            $result = json_decode($contents, true);
-
-            dd($result);
 
             $status = 'success';
             $message = 'Welcome!';
@@ -65,7 +59,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request)
     {
-        dd($request);
+        // dd($request);
         try {
             Http::post(
                 url('http://true-bengkel-v2.test/api/login'),
